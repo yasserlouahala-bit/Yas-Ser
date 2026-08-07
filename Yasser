@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مطعم ياسر</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f5f5f5;
+}
+header{
+    background:#d62828;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+nav{
+    background:#222;
+    text-align:center;
+    padding:15px;
+}
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:15px;
+    font-size:18px;
+}
+section{
+    padding:30px;
+}
+.cards{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+.card{
+    background:white;
+    width:250px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,.2);
+    overflow:hidden;
+}
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+.card h3{
+    text-align:center;
+}
+.card p{
+    text-align:center;
+    color:#555;
+}
+button{
+    display:block;
+    margin:15px auto;
+    background:#d62828;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:5px;
+    cursor:pointer;
+}
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🍔 مطعم ياسر</h1>
+<p>أشهى الأطباق والبيتزا والبرجر</p>
+</header>
+
+<nav>
+<a href="#plats">الأطباق</a>
+<a href="#pizza">البيتزا</a>
+<a href="#burger">البرجر</a>
+</nav>
+
+<section id="plats">
+<h2>🍽️ الأطباق</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://picsum.photos/300/200?1">
+<h3>شاورما</h3>
+<p>600 دج</p>
+<button>اطلب الآن</button>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/300/200?2">
+<h3>دجاج مشوي</h3>
+<p>900 دج</p>
+<button>اطلب الآن</button>
+</div>
+
+</div>
+</section>
+
+<section id="pizza">
+<h2>🍕 البيتزا</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://picsum.photos/300/200?3">
+<h3>بيتزا مارغريتا</h3>
+<p>800 دج</p>
+<button>اطلب الآن</button>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/300/200?4">
+<h3>بيتزا دجاج</h3>
+<p>1000 دج</p>
+<button>اطلب الآن</button>
+</div>
+
+</div>
+</section>
+
+<section id="burger">
+<h2>🍔 البرجر</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://picsum.photos/300/200?5">
+<h3>برجر لحم</h3>
+<p>700 دج</p>
+<button>اطلب الآن</button>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/300/200?6">
+<h3>برجر دجاج</h3>
+<p>650 دج</p>
+<button>اطلب الآن</button>
+</div>
+
+</div>
+</section>
+
+<footer>
+© 2026 مطعم ياسر
+</footer>
+
+</body>
+</html>
