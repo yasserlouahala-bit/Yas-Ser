@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VERDE DZ | Official Store</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#080909;color:#fff;font-family:Arial,sans-serif}
+.container{width:min(1150px,92%);margin:auto}header{position:sticky;top:0;z-index:5;background:#090a0aee;border-bottom:1px solid #292929}
+nav{height:72px;display:flex;justify-content:space-between;align-items:center}.logo{font-size:28px;font-weight:900;letter-spacing:2px}.logo span{color:#20d66b}
+nav a,button{background:#20d66b;color:#061008;border:0;border-radius:12px;padding:13px 18px;font-weight:900;text-decoration:none;cursor:pointer}
+.hero{text-align:center;padding:75px 0 45px}.hero small{color:#20d66b;font-weight:bold}.hero h1{font-size:clamp(50px,10vw,90px);margin:15px 0}.hero p{color:#aaa;line-height:1.8;font-size:18px}.offer{display:inline-block;background:#fff;color:#000;padding:13px 22px;border-radius:14px;font-size:24px;font-weight:900;margin-top:15px}
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding-bottom:65px}.card{background:#111313;border:1px solid #292929;border-radius:22px;overflow:hidden}.pic{height:360px;background:linear-gradient(135deg,#1b1d1d,#050505);display:flex;align-items:center;justify-content:center}.pic img{width:100%;height:100%;object-fit:cover}.info{padding:20px}.info h2{margin:0}.info p{color:#999}.price{font-size:22px;font-weight:900;margin:15px 0}select{width:100%;padding:13px;background:#080909;color:#fff;border:1px solid #333;border-radius:10px;margin-bottom:12px}button{width:100%}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;padding-bottom:65px}.feature{text-align:center;background:#111313;border:1px solid #292929;border-radius:16px;padding:22px}.feature span{display:block;color:#999;margin-top:7px}
+footer{text-align:center;border-top:1px solid #292929;padding:35px;color:#888}
+@media(max-width:800px){.products{grid-template-columns:1fr 1fr}.features{grid-template-columns:1fr}}@media(max-width:520px){.products{grid-template-columns:1fr}.pic{height:330px}}
+</style>
+</head>
+<body>
+<header><div class="container"><nav><div class="logo">VERDE<span>.</span>DZ</div><a href="#products">SHOP NOW</a></nav></div></header>
+<section class="hero"><div class="container"><small>🇩🇿 VERDE DZ — OFFICIAL STORE</small><h1>VERDE</h1><p>ستايل جديد، جودة عالية، وتصميم شبابي. اختار الموديل والمقاس واطلب مباشرة عبر WhatsApp.</p><div class="offer">6900 DA / ENSEMBLE</div></div></section>
+<section id="products" class="container"><div class="products" id="list"></div>
+<div class="features"><div class="feature"><b>📏 S — M — L — XL</b><span>اختار المقاس</span></div><div class="feature"><b>🚚 Livraison</b><span>التوصيل متوفر</span></div><div class="feature"><b>💬 WhatsApp</b><span>طلب سريع ومباشر</span></div></div></section>
+<footer>© 2026 VERDE DZ — Official Store</footer>
+<script>
+const WHATSAPP_NUMBER="213542859103";
+const products=["VERDE BLACK","VERDE GREY","VERDE WHITE","VERDE CYAN","VERDE NAVY","VERDE SPECIAL"];
+document.getElementById("list").innerHTML=products.map((p,i)=>`<article class="card"><div class="pic"><img src="images/product-${(i%5)+1}.jpg" onerror="this.style.display='none'" alt="${p}"></div><div class="info"><h2>${p}</h2><p>Ensemble T-shirt + Short</p><div class="price">6900 DA</div><select id="s${i}"><option>S</option><option selected>M</option><option>L</option><option>XL</option></select><button onclick="order('${p}',${i})">💬 Commander WhatsApp</button></div></article>`).join("");
+function order(product,i){let size=document.getElementById("s"+i).value;let msg=`السلام عليكم، حاب نطلب من VERDE DZ%0AProduit: ${encodeURIComponent(product)}%0ATaille: ${size}%0APrix: 6900 DA`;window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`,"_blank")}
+</script>
