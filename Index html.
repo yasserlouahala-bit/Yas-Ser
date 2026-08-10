@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VERDE DZ | Collection</title>
+<meta name="description" content="VERDE DZ - Collection en promotion">
+<style>
+:root{
+  --bg:#08090b;
+  --card:#111318;
+  --muted:#a9adb7;
+  --text:#f7f7f8;
+  --accent:#ff2d55;
+  --line:#252832;
+  --green:#20d46b;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Arial,"Tajawal",sans-serif;
+  background:
+    radial-gradient(circle at 20% 0%,rgba(255,45,85,.12),transparent 28%),
+    radial-gradient(circle at 90% 10%,rgba(32,212,107,.08),transparent 24%),
+    var(--bg);
+  color:var(--text);
+}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+
+header{
+  position:sticky;top:0;z-index:20;
+  backdrop-filter:blur(14px);
+  background:rgba(8,9,11,.82);
+  border-bottom:1px solid var(--line);
+}
+.nav{
+  min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:15px
+}
+.logo{
+  font-size:28px;font-weight:900;letter-spacing:2px
+}
+.logo span{color:var(--accent)}
+.nav a{
+  padding:10px 15px;border:1px solid var(--line);border-radius:999px;
+  color:#fff;font-weight:700
+}
+.hero{padding:70px 0 35px;text-align:center}
+.badge{
+  display:inline-block;padding:8px 14px;border:1px solid #3a3d47;border-radius:999px;
+  color:#fff;background:#111318;font-weight:700
+}
+h1{font-size:clamp(42px,8vw,78px);margin:20px 0 10px;letter-spacing:4px}
+.hero p{color:var(--muted);font-size:18px;margin:0 auto;max-width:650px;line-height:1.7}
+.price{
+  margin:24px auto 0;width:max-content;
+  font-size:28px;font-weight:900;background:#fff;color:#08090b;
+  padding:12px 22px;border-radius:16px
+}
+.price small{font-size:14px;color:#555}
+
+.grid{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:22px;
+  padding:25px 0 70px
+}
+.card{
+  background:linear-gradient(180deg,#15171c,#0f1014);
+  border:1px solid var(--line);border-radius:24px;overflow:hidden;
+  box-shadow:0 16px 45px rgba(0,0,0,.25)
+}
+.photo{background:#050505}
+.photo img{width:100%;display:block;aspect-ratio:709/945;object-fit:cover}
+.info{padding:20px}
+.info h2{margin:0 0 8px;font-size:23px}
+.info p{margin:0 0 16px;color:var(--muted)}
+label{display:block;font-size:14px;color:#c9ccd3;margin-bottom:8px}
+select{
+  width:100%;padding:14px 12px;border-radius:12px;border:1px solid #343741;
+  background:#0a0b0e;color:#fff;font-size:16px;outline:none
+}
+.order{
+  width:100%;margin-top:12px;padding:14px;border:0;border-radius:12px;
+  background:var(--green);color:#06120a;font-size:17px;font-weight:900;cursor:pointer
+}
+.order:hover{filter:brightness(1.06)}
+.note{font-size:12px!important;margin-top:10px!important}
+
+.features{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:65px
+}
+.feature{
+  border:1px solid var(--line);background:#101217;border-radius:18px;
+  padding:22px;text-align:center
+}
+.feature b{display:block;margin-bottom:6px}
+.feature span{color:var(--muted);font-size:14px}
+
+footer{
+  border-top:1px solid var(--line);padding:35px 0;color:var(--muted);text-align:center
+}
+.whatsapp{
+  display:inline-flex;align-items:center;gap:8px;margin-top:12px;
+  color:#fff;background:#1db954;padding:12px 18px;border-radius:999px;font-weight:800
+}
+
+@media(max-width:760px){
+  .grid{grid-template-columns:1fr}
+  .features{grid-template-columns:1fr}
+  .nav a{font-size:13px;padding:9px 12px}
+  .hero{padding-top:45px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="logo">VERDE<span>.</span>DZ</div>
+    <a href="#collection">شوف الكولكسيون ↓</a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="container">
+    <div class="badge">🇩🇿 COLLECTION EN PROMO 🔥</div>
+    <h1>VERDE</h1>
+    <p>Ensemble T-shirt + Short — اختار الموديل والحجم، واضغط على WhatsApp باش تدير الكوموند.</p>
+    <div class="price">6900 DA <small>/ l'ensemble</small></div>
+  </div>
+</section>
+
+<section id="collection" class="container">
+  <div class="grid">
+
+    <article class="card">
+      <div class="photo"><img src="images/product-1.jpg" alt="VERDE ensemble noir rouge"></div>
+      <div class="info">
+        <h2>VERDE Black / Red</h2>
+        <p>تيشورت + شورت — 6900 DA</p>
+        <label for="size1">الحجم</label>
+        <select id="size1">
+          <option value="S">S</option><option value="M" selected>M</option>
+          <option value="L">L</option><option value="XL">XL</option>
+        </select>
+        <button class="order" onclick="order('VERDE Black / Red','size1')">اطلب عبر WhatsApp</button>
+        <p class="note">📦 التوصيل متوفر</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="photo"><img src="images/product-2.jpg" alt="VERDE ensemble gris rose"></div>
+      <div class="info">
+        <h2>VERDE Grey / Pink</h2>
+        <p>تيشورت + شورت — 6900 DA</p>
+        <label for="size2">الحجم</label>
+        <select id="size2">
+          <option value="S">S</option><option value="M" selected>M</option>
+          <option value="L">L</option><option value="XL">XL</option>
+        </select>
+        <button class="order" onclick="order('VERDE Grey / Pink','size2')">اطلب عبر WhatsApp</button>
+        <p class="note">📦 التوصيل متوفر</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="photo"><img src="images/product-3.jpg" alt="VERDE ensemble noir blanc"></div>
+      <div class="info">
+        <h2>VERDE Black / White</h2>
+        <p>تيشورت + شورت — 6900 DA</p>
+        <label for="size3">الحجم</label>
+        <select id="size3">
+          <option value="S">S</option><option value="M" selected>M</option>
+          <option value="L">L</option><option value="XL">XL</option>
+        </select>
+        <button class="order" onclick="order('VERDE Black / White','size3')">اطلب عبر WhatsApp</button>
+        <p class="note">📦 التوصيل متوفر</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="photo"><img src="images/product-4.jpg" alt="VERDE ensemble blanc cyan"></div>
+      <div class="info">
+        <h2>VERDE White / Cyan</h2>
+        <p>تيشورت + شورت — 6900 DA</p>
+        <label for="size4">الحجم</label>
+        <select id="size4">
+          <option value="S">S</option><option value="M" selected>M</option>
+          <option value="L">L</option><option value="XL">XL</option>
+        </select>
+        <button class="order" onclick="order('VERDE White / Cyan','size4')">اطلب عبر WhatsApp</button>
+        <p class="note">📦 التوصيل متوفر</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="photo"><img src="images/product-5.jpg" alt="VERDE ensemble bleu gris"></div>
+      <div class="info">
+        <h2>VERDE Navy / Grey</h2>
+        <p>تيشورت + شورت — 6900 DA</p>
+        <label for="size5">الحجم</label>
+        <select id="size5">
+          <option value="S">S</option><option value="M" selected>M</option>
+          <option value="L">L</option><option value="XL">XL</option>
+        </select>
+        <button class="order" onclick="order('VERDE Navy / Grey','size5')">اطلب عبر WhatsApp</button>
+        <p class="note">📦 التوصيل متوفر</p>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="features">
+    <div class="feature"><b>💰 6900 DA</b><span>السعر تاع l'ensemble</span></div>
+    <div class="feature"><b>📏 S • M • L • XL</b><span>اختار الحجم قبل الكوموند</span></div>
+    <div class="feature"><b>💬 WhatsApp</b><span>الكوموند تروح مباشرة للبائع</span></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <strong>VERDE.DZ</strong>
+    <div>للطلب والاستفسار عبر WhatsApp</div>
+    <a class="whatsapp" id="footerWhatsapp" href="#" target="_blank">💬 WhatsApp</a>
+    <p style="font-size:12px;margin-top:18px">
+      ⚠️ بدّل رقم WhatsApp داخل ملف <b>index.html</b> قبل النشر.
+    </p>
+  </div>
+</footer>
+
+<script>
+/* ================================
+   بدّل الرقم هنا برقم WhatsApp تاعك
+   مثال الجزائر: 213551234567
+   بلا + وبلا مسافات
+================================ */
+const WHATSAPP_NUMBER = "213000000000";
+
+function order(product, selectId){
+  const size = document.getElementById(selectId).value;
+  const text =
+    "السلام عليكم، حاب نطلب من VERDE DZ%0A" +
+    "Produit: " + encodeURIComponent(product) + "%0A" +
+    "Taille: " + encodeURIComponent(size) + "%0A" +
+    "Prix: 6900 DA";
+  window.open("https://wa.me/" + WHATSAPP_NUMBER + "?text=" + text, "_blank");
+}
+
+document.getElementById("footerWhatsapp").href =
+  "https://wa.me/" + WHATSAPP_NUMBER;
+</script>
+
+</body>
+</html>
+
